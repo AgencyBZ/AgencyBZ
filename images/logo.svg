@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
     <!-- House shape -->
-    <path d="M8 32V16L20 8L32 16V32H8Z" fill="#FF5A5F"/>
-    <!-- Arrow pointing up, extra thick stroke -->
-    <path d="M20 32V20M15 24L20 20L25 24" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8 32V16L20 8L32 16V32H8Z" fill="#0066FF"/>
+    <!-- Light blue triangle -->
+    <path d="M8 32H32L20 22L8 32Z" fill="#99CCFF"/>
 </svg> 

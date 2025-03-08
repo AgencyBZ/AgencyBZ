@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- Simple house shape -->
-    <path d="
-        M4 27
-        V12
-        L16 4
-        L28 12
-        V27
-        H4
-        Z
-    " fill="#ef4444" rx="3"/>
-    
-    <!-- White arrow -->
-    <path d="
-        M16 16
-        V27
-        M16 16
-        L11 21
-        M16 16
-        L21 21
-    " stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <!-- House shape -->
+    <path d="M6 26V13L16 6L26 13V26H6Z" fill="#0066FF"/>
+    <!-- Light blue triangle -->
+    <path d="M6 26H26L16 18L6 26Z" fill="#99CCFF"/>
 </svg> 

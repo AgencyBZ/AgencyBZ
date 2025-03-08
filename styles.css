@@ -15,7 +15,7 @@ h1.font-serif {
 }
 
 .nav-link:hover {
-    color: #ef4444;
+    color: #0066FF;
 }
 
 .image-container {
@@ -55,4 +55,29 @@ h1.font-serif {
 /* Modern font rendering for headings */
 h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.02em;
+}
+
+/* Nextdoor logo styling */
+.logo-text {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.logo-text .xe-combo {
+    position: relative;
+    display: inline-block;
+    letter-spacing: -0.05em;
+}
+
+.logo-text .xe-combo::before {
+    content: 'x';
+}
+
+.logo-text .xe-combo::after {
+    content: 'e';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-30%);
+    color: #0066FF;
 } 
