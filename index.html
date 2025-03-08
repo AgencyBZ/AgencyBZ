@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift - PropTech Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <script src="script.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-50 font-sans">
+    <nav class="flex items-center fixed w-full top-0 bg-stone-50/95 backdrop-blur-sm z-50">
+        <div class="container mx-auto px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center -ml-4">
+                    <img src="images/logo.svg" alt="Swift logo" class="h-10 w-10">
+                    <span class="text-3xl font-bold text-gray-800 ml-2">Swift</span>
+                </div>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#philosophy" class="text-gray-700 nav-link font-medium">Philosophy</a>
+                    <a href="#about" class="text-gray-700 nav-link font-medium">About</a>
+                    <a href="#faq" class="text-gray-700 nav-link font-medium">FAQ</a>
+                    <a href="contact.html" class="text-gray-700 nav-link font-medium">Get in touch</a>
+                </div>
+                <a href="contact.html" class="md:hidden bg-gray-900 text-white px-5 py-2 rounded-full hover:bg-gray-800 transition-colors font-medium text-sm">
+                    Get in touch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+        <section class="container mx-auto px-8 mt-24">
+            <h1 class="text-4xl md:text-5xl font-serif text-gray-800 max-w-4xl mx-auto text-center leading-tight">
+                An enduring home for <span class="italic font-serif">Wonderful Rental Agencies</span>
+            </h1>
+
+            <div class="hidden md:grid grid-cols-3 gap-8 mt-20">
+                <div class="aspect-[4/3] overflow-hidden rounded-lg image-container">
+                    <img src="images/suburban-house.jpg" alt="Beautiful Suburban House" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] overflow-hidden rounded-lg image-container">
+                    <img src="images/city-apartment.jpg" alt="Modern City Apartment" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/3] overflow-hidden rounded-lg image-container">
+                    <img src="images/painted-ladies.jpg" alt="San Francisco Painted Ladies" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="md:hidden mt-20 relative overflow-hidden touch-pan-x" id="mobile-carousel">
+                <div class="flex transition-transform duration-1000 ease-linear">
+                    <div class="w-full flex-none aspect-[4/3] overflow-hidden rounded-lg">
+                        <img src="images/suburban-house.jpg" alt="Beautiful Suburban House" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full flex-none aspect-[4/3] overflow-hidden rounded-lg">
+                        <img src="images/city-apartment.jpg" alt="Modern City Apartment" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full flex-none aspect-[4/3] overflow-hidden rounded-lg">
+                        <img src="images/painted-ladies.jpg" alt="San Francisco Painted Ladies" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                    <div class="w-2 h-2 rounded-full bg-white/50"></div>
+                    <div class="w-2 h-2 rounded-full bg-white/50"></div>
+                    <div class="w-2 h-2 rounded-full bg-white/50"></div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-16">
+                <a href="#philosophy" class="scroll-arrow">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="19" stroke="#ef4444" stroke-width="2"/>
+                        <path d="M20 12v16M13 21l7 7 7-7" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section id="philosophy" class="container mx-auto px-8 mt-32 scroll-mt-24">
+            <h2 class="text-6xl font-medium text-gray-800 max-w-4xl mx-auto text-center leading-tight mb-12">
+                Redefining rentals
+            </h2>
+            <p class="text-xl font-normal text-gray-600 max-w-3xl mx-auto text-center leading-relaxed">
+                We are on a mission to redefine the rental experience, making it simpler, smarter, and more reliable for individuals, families, landlords, and real estate agencies. We leverage modern AI advancements and tailored automation systems specifically for our needs. We champion a digital-first experience that seamlessly cooperates with our ground team, ensuring top-notch service for tenants and landlords.
+            </p>
+        </section>
+
+        <section id="about" class="container mx-auto px-8 mt-64 mb-32">
+            <div class="block md:grid md:grid-cols-2 gap-16">
+                <div class="text-center md:text-left">
+                    <h2 class="text-5xl font-medium mb-4">Our operating principle</h2>
+                    <p class="text-xl text-gray-600 mb-8">We offer a transparent acquisition process, aimed at acknowledging the value of what you've created.</p>
+                    <div class="flex justify-center md:justify-start">
+                        <a href="contact.html" class="bg-gray-900 text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors font-medium text-sm">
+                            Get in touch
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:grid grid-cols-2 gap-8 mt-16 md:mt-0">
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-medium mb-4">Seamless onboarding</h3>
+                        <p class="text-gray-600">Worry less about the complexities of the transition. We have a dedicated team that ensures a seamless onboarding process.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-medium mb-4">Immediate liquidity</h3>
+                        <p class="text-gray-600">Unlock the wealth tied up in your business. Our acquisition strategy provides you with immediate liquidity.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-medium mb-4">Quickness</h3>
+                        <p class="text-gray-600">We evaluate your company in a timely and well-founded manner and ideally carry out takeovers within a few weeks.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-medium mb-4">Access to a network</h3>
+                        <p class="text-gray-600">Joining Swift doesn't just mean a successful sale of your agency, it means being part of something bigger.</p>
+                    </div>
+                </div>
+                <div class="md:hidden mt-16 relative overflow-hidden touch-pan-x" id="features-carousel">
+                    <div class="flex transition-transform duration-1000 ease-linear">
+                        <div class="w-full flex-none bg-white p-8 rounded-lg shadow-sm">
+                            <h3 class="text-2xl font-medium mb-4">Seamless onboarding</h3>
+                            <p class="text-gray-600">Worry less about the complexities of the transition. We have a dedicated team that ensures a seamless onboarding process.</p>
+                        </div>
+                        <div class="w-full flex-none bg-white p-8 rounded-lg shadow-sm">
+                            <h3 class="text-2xl font-medium mb-4">Immediate liquidity</h3>
+                            <p class="text-gray-600">Unlock the wealth tied up in your business. Our acquisition strategy provides you with immediate liquidity.</p>
+                        </div>
+                        <div class="w-full flex-none bg-white p-8 rounded-lg shadow-sm">
+                            <h3 class="text-2xl font-medium mb-4">Quickness</h3>
+                            <p class="text-gray-600">We evaluate your company in a timely and well-founded manner and ideally carry out takeovers within a few weeks.</p>
+                        </div>
+                        <div class="w-full flex-none bg-white p-8 rounded-lg shadow-sm">
+                            <h3 class="text-2xl font-medium mb-4">Access to a network</h3>
+                            <p class="text-gray-600">Joining Swift doesn't just mean a successful sale of your agency, it means being part of something bigger.</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 left-0 right-0 flex justify-center space-x-2">
+                        <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                        <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                        <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                        <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="container mx-auto px-8 mt-32 mb-32 scroll-mt-24">
+            <h2 class="text-5xl font-medium text-gray-800 max-w-4xl mx-auto text-center leading-tight mb-6">
+                Frequently asked questions
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto text-center leading-relaxed mb-16">
+                Embarking on a new chapter with Swift can be a big step. We're here to address any queries to simplify your transition
+            </p>
+
+            <div class="max-w-4xl mx-auto space-y-12">
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-800 mb-4">Why should I sell my business now?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        When owners approach us, they mention various reasons for selling their business. Some are looking to make a change in their life, e.g. vacation, new venture, retirement. Other owners exit because of the limited growth potential of their current business, e.g. needing funds to speed up the growth, enter new markets, or launch new products. Some are looking to take advantage of the current high demand for portfolio acquisitions - interest in portfolio consolidation will not last forever.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-800 mb-4">Why should I choose Swift over well known Corporates?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We are entrepreneurs who have built businesses ourselves. Our team has an extensive background in operations and speaks your language. Our priority is to preserve the legacy you've built and take it to the next level together. You receive more for your business than from other big-name Corporates. Your payouts are linked to revenue, not to EBITDA.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-800 mb-4">How long does it take you to close deals?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Usually, we close deals in 60 days. We start with a short intro meeting, then we sign an NDA and evaluate your business. If all goes well, we proceed with a letter of intent and due diligence (3-4 weeks). Finally, all legal papers are signed, and the funds are disbursed.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-medium text-gray-800 mb-4">Can I receive a referral fee for introducing you to another seller?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Sure, just get in touch with us. We are compensating fairly all referrals we receive.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="floating-banner" class="fixed bottom-0 left-0 w-full transform translate-y-full transition-transform duration-300 ease-in-out z-50">
+        <div class="bg-white shadow-lg mx-auto max-w-xs md:max-w-2xl m-4 rounded-full">
+            <div class="flex items-center justify-between py-2 md:py-3 px-4 md:px-6">
+                <div class="flex items-center space-x-4">
+                    <img src="images/logo.svg" alt="Swift logo" class="h-6 w-6 md:h-7 md:w-7">
+                    <p class="hidden md:block text-gray-700 font-medium text-sm">You are an agency owner looking for an exit?</p>
+                </div>
+                <button onclick="window.location.href='contact.html'" class="bg-gray-900 text-white px-4 md:px-5 py-1 md:py-1.5 rounded-full hover:bg-gray-800 transition-colors font-medium text-sm">
+                    Sell
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

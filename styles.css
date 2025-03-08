@@ -1,0 +1,58 @@
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1.font-serif {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.nav-link {
+    transition: color 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #ef4444;
+}
+
+.image-container {
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+    transform: scale(1.02);
+}
+
+.scroll-arrow {
+    animation: bounce 2s infinite;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-arrow:hover {
+    opacity: 0.7;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Show floating banner when scrolled past first section */
+.show-banner {
+    transform: translateY(0) !important;
+}
+
+/* Modern font rendering for headings */
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+} 
