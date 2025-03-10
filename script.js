@@ -24,9 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function slideImages() {
         imageCurrentSlide = (imageCurrentSlide + 1) % imageTotalSlides;
-        const offset = imageCurrentSlide * -100;
-        imageCarouselInner.style.transform = `translateX(${offset}%)`;
-        updateImageDots();
+        if (imageCarouselInner) {
+            imageCarouselInner.style.transform = `translateX(-${imageCurrentSlide * 100}%)`;
+            updateImageDots();
+        }
     }
 
     // Features carousel
@@ -41,8 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function slideFeatures() {
         featuresCurrentSlide = (featuresCurrentSlide + 1) % featuresTotalSlides;
-        featuresCarousel.style.transform = `translateX(-${featuresCurrentSlide * 100}%)`;
-        updateFeatureDots();
+        if (featuresCarousel) {
+            const carouselInner = featuresCarousel.querySelector('.flex');
+            if (carouselInner) {
+                carouselInner.style.transform = `translateX(-${featuresCurrentSlide * 100}%)`;
+                updateFeatureDots();
+            }
+        }
     }
 
     // Touch events for image carousel
@@ -58,25 +64,27 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 imageCurrentSlide = (imageCurrentSlide - 1 + imageTotalSlides) % imageTotalSlides;
             }
-            imageCarouselInner.style.transform = `translateX(${imageCurrentSlide * -100}%)`;
+            imageCarouselInner.style.transform = `translateX(-${imageCurrentSlide * 100}%)`;
             updateImageDots();
         });
     });
 
     // Touch events for features carousel
-    featuresCarousel?.addEventListener('touchstart', (e) => {
+    const featuresCarouselInner = featuresCarousel?.querySelector('.flex');
+    
+    featuresCarouselInner?.addEventListener('touchstart', (e) => {
         touchStartX = e.touches[0].clientX;
     });
 
-    featuresCarousel?.addEventListener('touchend', (e) => {
+    featuresCarouselInner?.addEventListener('touchend', (e) => {
         touchEndX = e.changedTouches[0].clientX;
-        handleSwipe(featuresCarousel, touchStartX, touchEndX, (direction) => {
+        handleSwipe(featuresCarouselInner, touchStartX, touchEndX, (direction) => {
             if (direction === 'left') {
                 featuresCurrentSlide = (featuresCurrentSlide + 1) % featuresTotalSlides;
             } else {
                 featuresCurrentSlide = (featuresCurrentSlide - 1 + featuresTotalSlides) % featuresTotalSlides;
             }
-            featuresCarousel.style.transform = `translateX(-${featuresCurrentSlide * 100}%)`;
+            featuresCarouselInner.style.transform = `translateX(-${featuresCurrentSlide * 100}%)`;
             updateFeatureDots();
         });
     });
@@ -94,20 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initialize dots
+    // Initialize dots and start carousels
     updateImageDots();
     updateFeatureDots();
-
-    // Start the carousels with delays
-    if (imageCarouselInner) {
-        // Start image carousel after 2 seconds
-        setTimeout(() => {
-            setInterval(slideImages, 16000); // Change image every 16 seconds
-        }, 2000);
-    }
     
-    if (featuresCarousel) {
-        setInterval(slideFeatures, 8000); // Change feature every 8 seconds
+    // Start carousels
+    if (imageCarouselInner) {
+        slideImages(); // Start immediately
+        setInterval(slideImages, 16000);
+    }
+    if (featuresCarouselInner) {
+        setInterval(slideFeatures, 8000);
     }
 
     // Floating banner
