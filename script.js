@@ -1,11 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Image carousel
-    const imageCarousel = document.querySelector('#mobile-carousel .flex');
-    const imageDots = document.querySelectorAll('#mobile-carousel .w-2');
-    const imageTotalSlides = 3;
-    let imageCurrentSlide = imageTotalSlides - 1; // Start from the last slide
+document.addEventListener('DOMContentLoaded', () => {
+    const imageCarousel = document.getElementById('mobile-carousel');
+    const featuresCarousel = document.getElementById('features-carousel');
+    
+    let imageCurrentSlide = 0;
+    let featuresCurrentSlide = 0;
+    
+    const imageTotalSlides = 3; // Total number of images
+    const featuresTotalSlides = 4; // Total number of features
+    
     let touchStartX = 0;
     let touchEndX = 0;
+
+    // Image carousel
+    const imageCarouselInner = document.querySelector('#mobile-carousel .flex');
+    const imageDots = document.querySelectorAll('#mobile-carousel .w-2');
 
     function updateImageDots() {
         imageDots.forEach((dot, index) => {
@@ -15,16 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function slideImages() {
-        imageCurrentSlide = (imageCurrentSlide - 1 + imageTotalSlides) % imageTotalSlides; // Move backwards
-        imageCarousel.style.transform = `translateX(-${imageCurrentSlide * 100}%)`;
+        imageCurrentSlide = (imageCurrentSlide + 1) % imageTotalSlides;
+        const offset = imageCurrentSlide * -100;
+        imageCarouselInner.style.transform = `translateX(${offset}%)`;
         updateImageDots();
     }
 
     // Features carousel
-    const featuresCarousel = document.querySelector('#features-carousel .flex');
     const featureDots = document.querySelectorAll('#features-carousel .w-2');
-    let featuresCurrentSlide = 0;
-    const featuresTotalSlides = 4;
 
     function updateFeatureDots() {
         featureDots.forEach((dot, index) => {
@@ -40,19 +46,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Touch events for image carousel
-    imageCarousel?.addEventListener('touchstart', (e) => {
+    imageCarouselInner?.addEventListener('touchstart', (e) => {
         touchStartX = e.touches[0].clientX;
     });
 
-    imageCarousel?.addEventListener('touchend', (e) => {
+    imageCarouselInner?.addEventListener('touchend', (e) => {
         touchEndX = e.changedTouches[0].clientX;
-        handleSwipe(imageCarousel, touchStartX, touchEndX, (direction) => {
+        handleSwipe(imageCarouselInner, touchStartX, touchEndX, (direction) => {
             if (direction === 'left') {
                 imageCurrentSlide = (imageCurrentSlide + 1) % imageTotalSlides;
             } else {
                 imageCurrentSlide = (imageCurrentSlide - 1 + imageTotalSlides) % imageTotalSlides;
             }
-            imageCarousel.style.transform = `translateX(-${imageCurrentSlide * 100}%)`;
+            imageCarouselInner.style.transform = `translateX(${imageCurrentSlide * -100}%)`;
             updateImageDots();
         });
     });
@@ -92,9 +98,17 @@ document.addEventListener('DOMContentLoaded', function() {
     updateImageDots();
     updateFeatureDots();
 
-    // Start the carousels
-    if (imageCarousel) setInterval(slideImages, 5000); // Change image every 5 seconds
-    if (featuresCarousel) setInterval(slideFeatures, 4000); // Change feature every 4 seconds
+    // Start the carousels with delays
+    if (imageCarouselInner) {
+        // Start image carousel after 2 seconds
+        setTimeout(() => {
+            setInterval(slideImages, 16000); // Change image every 16 seconds
+        }, 2000);
+    }
+    
+    if (featuresCarousel) {
+        setInterval(slideFeatures, 8000); // Change feature every 8 seconds
+    }
 
     // Floating banner
     const banner = document.getElementById('floating-banner');
