@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma - Aolado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-50 font-sans">
+    <nav class="flex items-center fixed w-full top-0 bg-stone-50/95 backdrop-blur-sm z-50">
+        <div class="container mx-auto px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="flex items-center -ml-4">
+                    <div class="h-10 w-10">
+                        <img src="images/logo.svg" alt="Logo Aolado" class="h-full w-full">
+                    </div>
+                    <span class="text-3xl font-bold text-gray-800 ml-2">Aolado</span>
+                </a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="/" class="text-gray-700 nav-link font-medium">Início</a>
+                    <a href="contact.html" class="bg-gray-900 text-white px-5 py-2 rounded-full hover:bg-gray-800 transition-colors font-medium text-sm">Entre em contato</a>
+                </div>
+                <a href="contact.html" class="md:hidden bg-gray-900 text-white px-5 py-2 rounded-full hover:bg-gray-800 transition-colors font-medium text-sm">
+                    Entre em contato
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-8 mt-24">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-medium text-gray-800 mb-6">
+                    Transforme sua agência com IA
+                </h1>
+                <p class="text-xl text-gray-600 mb-12">
+                    Maximize a eficiência, aumente os lucros, garanta conformidade e tenha total transparência em todo seu portfólio de imóveis
+                </p>
+                <a href="contact.html" class="bg-gradient-to-r from-[#0066FF] to-[#003399] text-white px-8 py-3 rounded-full hover:opacity-90 transition-opacity font-medium inline-flex items-center">
+                    Comece agora <span class="text-white ml-2 [filter:brightness(0)_invert(1)]">✨</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Dashboard Demo Section -->
+        <section class="container mx-auto px-8 mt-32">
+            <div class="max-w-[1200px] mx-auto">
+                <!-- Original Dashboard content -->
+                <div class="bg-[#F8F9FB] rounded-[32px] shadow-[0_24px_48px_-12px_rgba(16,24,40,0.18)]">
+                    <div class="flex flex-col md:flex-row">
+                        <!-- Sidebar -->
+                        <div class="w-full md:w-[240px] md:min-h-[700px] border-b md:border-b-0 md:border-r border-[#E5E7EB]/60 p-3 shrink-0">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="h-8 w-8">
+                                    <img src="images/logo.svg" alt="Logo Aolado" class="h-full w-full">
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-[13px] font-medium text-[#111827]">Filial São Paulo 01</span>
+                                </div>
+                            </div>
+                            <div class="flex md:block overflow-x-auto md:overflow-x-visible space-x-2 md:space-x-0 md:space-y-1 pb-2 md:pb-0">
+                                <a href="#" class="flex-shrink-0 md:flex-shrink flex items-center gap-3 px-3 py-2 rounded-lg bg-[#F3F4F6] text-[#111827]">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 13h4v10H3V13zM17 9h4v14h-4V9zM10 0h4v23h-4V0z" fill="currentColor"/>
+                                    </svg>
+                                    <span class="text-sm font-medium">Performance</span>
+                                </a>
+                                <a href="#" class="flex-shrink-0 md:flex-shrink flex items-center gap-3 px-3 py-2 rounded-lg text-[#6B7280] hover:bg-[#F3F4F6] transition-colors">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21 9v11H3V9h18zm0-2H3V5h18v2z" fill="currentColor"/>
+                                    </svg>
+                                    <span class="text-sm">Imóveis</span>
+                                </a>
+                                <a href="#" class="flex-shrink-0 md:flex-shrink flex items-center gap-3 px-3 py-2 rounded-lg text-[#6B7280] hover:bg-[#F3F4F6] transition-colors">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                    </svg>
+                                    <span class="text-sm">Proprietários</span>
+                                </a>
+                                <a href="#" class="flex-shrink-0 md:flex-shrink flex items-center gap-3 px-3 py-2 rounded-lg text-[#6B7280] hover:bg-[#F3F4F6] transition-colors">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/>
+                                    </svg>
+                                    <span class="text-sm">Inquilinos</span>
+                                </a>
+                                <a href="#" class="flex-shrink-0 md:flex-shrink flex items-center gap-3 px-3 py-2 rounded-lg text-[#6B7280] hover:bg-[#F3F4F6] transition-colors">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/>
+                                    </svg>
+                                    <span class="text-sm">Contabilidade</span>
+                                </a>
+                                <a href="#" class="flex-shrink-0 md:flex-shrink flex items-center gap-3 px-3 py-2 rounded-lg text-[#6B7280] hover:bg-[#F3F4F6] transition-colors">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                        <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" fill="currentColor"/>
+                                    </svg>
+                                    <span class="text-sm">Documentos</span>
+                                </a>
+                                <a href="#" class="flex-shrink-0 md:flex-shrink flex items-center gap-3 px-3 py-2 rounded-lg text-[#6B7280] hover:bg-[#F3F4F6] transition-colors">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 12.75c1.63 0 3.07.39 4.24.9 1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73 1.17-.52 2.61-.91 4.24-.91zM4 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm18 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-12-2c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z" fill="currentColor"/>
+                                    </svg>
+                                    <span class="text-sm">Equipe</span>
+                                </a>
+                                <a href="#" class="flex-shrink-0 md:flex-shrink flex items-center gap-3 px-3 py-2 rounded-lg text-[#6B7280] hover:bg-[#F3F4F6] transition-colors">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                        <path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" fill="currentColor"/>
+                                    </svg>
+                                    <span class="text-sm">Configurações</span>
+                                </a>
+                                <a href="#" class="flex-shrink-0 md:flex-shrink flex items-center gap-3 px-3 py-2 rounded-lg text-[#6B7280] hover:bg-[#F3F4F6] transition-colors">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" fill="currentColor"/>
+                                    </svg>
+                                    <span class="text-sm">Ajuda & Suporte</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Main Dashboard Content -->
+                        <div class="flex-1 p-3 min-w-0">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+                                <!-- Properties Card -->
+                                <div class="bg-white rounded-2xl pt-3 pb-8 px-3 shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+                                    <div class="text-sm font-semibold text-[#111827] mb-2">Imóveis</div>
+                                    <div class="text-[28px] md:text-[32px] leading-8 font-semibold text-[#111827] mb-2">96%</div>
+                                    <div class="text-sm text-[#6B7280] mb-2">Ocupação</div>
+                                    <div class="flex items-center gap-1 text-sm text-[#6B7280]">
+                                        <span class="font-medium">1200</span>
+                                        <span>Gerenciados</span>
+                                    </div>
+                                </div>
+
+                                <!-- Time to Let Card -->
+                                <div class="bg-white rounded-2xl pt-3 pb-8 px-3 shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+                                    <div class="text-sm font-semibold text-[#111827] mb-2">Tempo para Alugar</div>
+                                    <div class="text-[28px] md:text-[32px] leading-8 font-semibold text-[#111827] mb-2">12</div>
+                                    <div class="text-sm text-[#6B7280] mb-2">Dias em média</div>
+                                    <div class="flex items-center gap-1 text-sm text-[#6B7280]">
+                                        <span class="font-medium">-30%</span>
+                                        <span>vs. último mês</span>
+                                    </div>
+                                </div>
+
+                                <!-- Rent Collection Card -->
+                                <div class="bg-white rounded-2xl pt-3 pb-8 px-3 shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+                                    <div class="text-sm font-semibold text-[#111827] mb-2">Cobrança de Aluguel</div>
+                                    <div class="text-[28px] md:text-[32px] leading-8 font-semibold text-[#111827] mb-2">R$ 120K</div>
+                                    <div class="text-sm text-[#6B7280] mb-2">Total</div>
+                                    <div class="flex items-center gap-1 text-sm text-[#6B7280]">
+                                        <span class="font-medium">+2.1%</span>
+                                        <span>vs. último mês</span>
+                                    </div>
+                                </div>
+
+                                <!-- Repairs Card -->
+                                <div class="bg-white rounded-2xl pt-3 pb-8 px-3 shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+                                    <div class="text-sm font-semibold text-[#111827] mb-2">Reparos</div>
+                                    <div class="text-[28px] md:text-[32px] leading-8 font-semibold text-[#111827] mb-2">R$ 20K</div>
+                                    <div class="text-sm text-[#6B7280] mb-2">Custo total</div>
+                                    <div class="flex items-center gap-1 text-sm text-[#6B7280]">
+                                        <span class="font-medium">+3.4%</span>
+                                        <span>vs. último mês</span>
+                                    </div>
+                                </div>
+
+                                <!-- Charts Section - Full width on mobile, 2 columns on larger screens -->
+                                <div class="col-span-1 sm:col-span-2 lg:col-span-2 bg-white rounded-2xl pt-3 pb-8 px-3 shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div class="text-sm font-semibold text-[#111827]">Lucros e Perdas</div>
+                                    </div>
+                                    <div class="h-[160px] relative">
+                                        <svg width="100%" height="100%" viewBox="0 0 500 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Center line -->
+                                            <line x1="20" y1="130" x2="380" y2="130" stroke="#E5E7EB" stroke-width="1"/>
+                                            
+                                            <!-- Negative bars (light red) -->
+                                            <rect x="40" y="130" width="40" height="16" rx="4" fill="#FEE2E2"/>
+                                            <rect x="100" y="130" width="40" height="26" rx="4" fill="#FEE2E2"/>
+                                            <rect x="160" y="130" width="40" height="21" rx="4" fill="#FEE2E2"/>
+                                            <rect x="220" y="130" width="40" height="31" rx="4" fill="#FEE2E2"/>
+                                            <rect x="280" y="130" width="40" height="16" rx="4" fill="#FEE2E2"/>
+                                            <rect x="340" y="130" width="40" height="21" rx="4" fill="#FEE2E2"/>
+
+                                            <!-- Positive bars (blue) -->
+                                            <rect x="40" y="81" width="40" height="49" rx="4" fill="#E5F7FF"/>
+                                            <rect x="100" y="71" width="40" height="59" rx="4" fill="#E5F7FF"/>
+                                            <rect x="160" y="61" width="40" height="69" rx="4" fill="#E5F7FF"/>
+                                            <rect x="220" y="56" width="40" height="74" rx="4" fill="#E5F7FF"/>
+                                            <rect x="280" y="66" width="40" height="64" rx="4" fill="#E5F7FF"/>
+                                            <rect x="340" y="76" width="40" height="54" rx="4" fill="#E5F7FF"/>
+
+                                            <!-- Placeholder labels -->
+                                            <g transform="translate(400, 20)">
+                                                <!-- Revenue label placeholders -->
+                                                <rect width="60" height="12" rx="6" fill="#F3F4F6"/>
+                                                <rect y="20" width="40" height="12" rx="6" fill="#F3F4F6"/>
+                                                <rect y="40" width="50" height="12" rx="6" fill="#F3F4F6"/>
+
+                                                <!-- Cost label placeholders -->
+                                                <rect y="80" width="45" height="12" rx="6" fill="#F3F4F6"/>
+                                                <rect y="100" width="55" height="12" rx="6" fill="#F3F4F6"/>
+                                                <rect y="120" width="40" height="12" rx="6" fill="#F3F4F6"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="col-span-1 sm:col-span-2 lg:col-span-2 bg-white rounded-2xl pt-3 pb-8 px-3 shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div class="text-sm font-semibold text-[#111827]">Fluxo de Caixa</div>
+                                    </div>
+                                    <div class="h-[160px] relative">
+                                        <svg width="100%" height="100%" viewBox="0 0 500 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Center line -->
+                                            <line x1="20" y1="130" x2="380" y2="130" stroke="#E5E7EB" stroke-width="1"/>
+                                            
+                                            <!-- Starting value -->
+                                            <rect x="40" y="70" width="40" height="60" rx="4" fill="#E5F7FF"/>
+                                            
+                                            <!-- Horizontal connector -->
+                                            <line x1="80" y1="70" x2="100" y2="70" stroke="#E5E7EB" stroke-width="1"/>
+                                            
+                                            <!-- First positive -->
+                                            <rect x="100" y="60" width="40" height="10" rx="4" fill="#E5F7FF"/>
+                                            
+                                            <!-- Horizontal connector -->
+                                            <line x1="140" y1="60" x2="160" y2="60" stroke="#E5E7EB" stroke-width="1"/>
+                                            
+                                            <!-- Second positive -->
+                                            <rect x="160" y="40" width="40" height="20" rx="4" fill="#E5F7FF"/>
+                                            
+                                            <!-- Horizontal connector -->
+                                            <line x1="200" y1="40" x2="220" y2="40" stroke="#E5E7EB" stroke-width="1"/>
+                                            
+                                            <!-- First negative -->
+                                            <rect x="220" y="40" width="40" height="30" rx="4" fill="#FEE2E2"/>
+                                            
+                                            <!-- Horizontal connector -->
+                                            <line x1="260" y1="70" x2="280" y2="70" stroke="#E5E7EB" stroke-width="1"/>
+                                            
+                                            <!-- Second negative -->
+                                            <rect x="280" y="70" width="40" height="20" rx="4" fill="#FEE2E2"/>
+                                            
+                                            <!-- Horizontal connector -->
+                                            <line x1="320" y1="90" x2="340" y2="90" stroke="#E5E7EB" stroke-width="1"/>
+                                            
+                                            <!-- Final result -->
+                                            <rect x="340" y="90" width="40" height="40" rx="4" fill="#E5F7FF"/>
+
+                                            <!-- Placeholder labels -->
+                                            <g transform="translate(400, 20)">
+                                                <!-- Flow labels -->
+                                                <rect width="60" height="12" rx="6" fill="#F3F4F6"/>
+                                                <rect y="30" width="45" height="12" rx="6" fill="#F3F4F6"/>
+                                                <rect y="60" width="50" height="12" rx="6" fill="#F3F4F6"/>
+                                                <rect y="90" width="40" height="12" rx="6" fill="#F3F4F6"/>
+                                                <rect y="120" width="55" height="12" rx="6" fill="#F3F4F6"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Cards - Full width on mobile -->
+                                <div class="col-span-1 sm:col-span-2 lg:col-span-2 bg-white rounded-2xl pt-3 pb-8 px-3 shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <div class="text-sm font-semibold text-[#111827]">Aluguel em Atraso: R$ 45.2K</div>
+                                    </div>
+                                    <div class="h-[180px] relative">
+                                        <svg width="100%" height="100%" viewBox="0 0 500 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Bars and labels -->
+                                            <!-- 0-30 days -->
+                                            <g transform="translate(20, 35)">
+                                                <text x="0" y="16" font-family="Inter" font-size="11" font-weight="500" fill="#6B7280" text-anchor="start">0-30</text>
+                                                <rect x="40" y="0" width="280" height="24" rx="6" fill="#E5F7FF"/>
+                                                <text x="330" y="16" font-family="Inter" font-size="11" font-weight="500" fill="#111827">R$ 12.2K</text>
+                                            </g>
+
+                                            <!-- 31-60 days -->
+                                            <g transform="translate(20, 75)">
+                                                <text x="0" y="16" font-family="Inter" font-size="11" font-weight="500" fill="#6B7280" text-anchor="start">31-60</text>
+                                                <rect x="40" y="0" width="240" height="24" rx="6" fill="#E5F7FF"/>
+                                                <text x="330" y="16" font-family="Inter" font-size="11" font-weight="500" fill="#111827">R$ 11.3K</text>
+                                            </g>
+
+                                            <!-- 61-90 days -->
+                                            <g transform="translate(20, 115)">
+                                                <text x="0" y="16" font-family="Inter" font-size="11" font-weight="500" fill="#6B7280" text-anchor="start">61-90</text>
+                                                <rect x="40" y="0" width="120" height="24" rx="6" fill="#E5F7FF"/>
+                                                <text x="330" y="16" font-family="Inter" font-size="11" font-weight="500" fill="#111827">R$ 5.2K</text>
+                                            </g>
+
+                                            <!-- 91+ days -->
+                                            <g transform="translate(20, 155)">
+                                                <text x="0" y="16" font-family="Inter" font-size="11" font-weight="500" fill="#6B7280" text-anchor="start">91+</text>
+                                                <rect x="40" y="0" width="80" height="24" rx="6" fill="#FEE2E2"/>
+                                                <text x="330" y="16" font-family="Inter" font-size="11" font-weight="500" fill="#111827">R$ 1.8K</text>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="col-span-1 sm:col-span-2 lg:col-span-2 bg-white rounded-2xl pt-3 pb-8 px-3 shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <div class="text-sm font-semibold text-[#111827]">Solicitações Recentes de Inquilinos</div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <!-- Request 1 -->
+                                        <div class="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50">
+                                            <div class="flex-shrink-0 w-8 h-8 bg-red-50 rounded-lg flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-red-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="min-w-0 flex-1">
+                                                <div class="text-sm font-medium text-gray-900">Consertar as luzes no elevador #1</div>
+                                                <div class="mt-1 text-xs text-gray-500 flex items-center gap-1">
+                                                    <span>18 dias atrás</span>
+                                                    <span class="inline-block w-1 h-1 bg-gray-300 rounded-full"></span>
+                                                    <span>Rua Principal, 15 - 2º andar</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-red-50 text-red-700">Atrasado</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Request 2 -->
+                                        <div class="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50">
+                                            <div class="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="min-w-0 flex-1">
+                                                <div class="text-sm font-medium text-gray-900">Consertar maçaneta quebrada</div>
+                                                <div class="mt-1 text-xs text-gray-500 flex items-center gap-1">
+                                                    <span>3 dias atrás</span>
+                                                    <span class="inline-block w-1 h-1 bg-gray-300 rounded-full"></span>
+                                                    <span>Rua Principal, 15 - 2º andar</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-700">Não Iniciado</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Request 3 -->
+                                        <div class="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50">
+                                            <div class="flex-shrink-0 w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="min-w-0 flex-1">
+                                                <div class="text-sm font-medium text-gray-900">Consertar vazamento no banheiro</div>
+                                                <div class="mt-1 text-xs text-gray-500 flex items-center gap-1">
+                                                    <span>5 dias atrás</span>
+                                                    <span class="inline-block w-1 h-1 bg-gray-300 rounded-full"></span>
+                                                    <span>Rua Principal, 15 - 2º andar</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-blue-50 text-blue-700">Em Andamento</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Features -->
+        <section class="container mx-auto px-8 mt-32">
+            <h2 class="text-3xl md:text-4xl font-medium text-gray-800 text-center mb-16">Recursos da Plataforma</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Tenant Find Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <h3 class="text-2xl font-medium mb-4 text-gray-800">Busca de Inquilinos</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            Automação inteligente de todas as consultas através de chat digital
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            8x mais propostas verificadas por propriedade
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            Visitas virtuais para dezenas de pessoas por imóvel
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Payments Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <h3 class="text-2xl font-medium mb-4 text-gray-800">Pagamentos</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            Pagamentos automáticos via débito direto
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            Sem necessidade de reconciliação diária
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            Redução significativa de inadimplência
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Property Management Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <h3 class="text-2xl font-medium mb-4 text-gray-800">Gestão de Imóveis</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            Automação completa de processos rotineiros
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            Comunicação centralizada em um só lugar
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            Status transparente de cada solicitação
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Compliance Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <h3 class="text-2xl font-medium mb-4 text-gray-800">Conformidade</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            100% de conformidade automatizada
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            Documentação legal totalmente automatizada
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#0066FF] mr-2">•</span>
+                            Verificações bancárias e referências automáticas
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="container mx-auto px-8 my-32">
+            <div class="bg-gradient-to-r from-[#0066FF] to-[#003399] rounded-3xl p-12 text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-medium mb-6">Pronto para transformar sua agência?</h2>
+                <a href="contact.html" class="bg-white text-[#0066FF] px-8 py-3 rounded-full hover:bg-opacity-90 transition-opacity font-medium inline-block">
+                    Entre em contato
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="floating-banner" class="fixed bottom-0 left-0 w-full transform translate-y-full transition-transform duration-300 ease-in-out z-50">
+        <div class="bg-white shadow-lg mx-auto max-w-[fit-content] md:max-w-xl m-3 rounded-full">
+            <div class="flex items-center justify-between p-1 md:p-2">
+                <div class="hidden md:flex items-center justify-center">
+                    <p class="text-gray-700 font-medium text-sm pl-2 text-center">Quer conhecer nossa plataforma?</p>
+                </div>
+                <div class="flex items-center space-x-2 md:space-x-3 mx-auto md:mx-0">
+                    <button onclick="window.location.href='contact.html'" class="bg-gradient-to-r from-[#0066FF] to-[#003399] text-white px-5 md:px-6 py-2.5 md:py-3 rounded-full hover:opacity-90 transition-opacity font-medium text-sm whitespace-nowrap">
+                        Entre em contato
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
